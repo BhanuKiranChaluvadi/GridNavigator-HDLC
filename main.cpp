@@ -1,4 +1,4 @@
-#include <iostream>
+#include <stdio.h>
 #include "yahdlc.h"
 
 int main() {
@@ -7,10 +7,9 @@ int main() {
     control.frame = YAHDLC_FRAME_DATA;
     control.seq_no = 1;
 
-    // Just print a message to indicate the program is running
-    std::cout << "YAHDLC library integrated successfully. Control Frame: " 
-              << control.frame << ", Sequence Number: " << static_cast<int>(control.seq_no) 
-              << std::endl;
+    // Print a message to indicate the program is running
+    printf("YAHDLC library integrated successfully. Control Frame: %d, Sequence Number: %d\n", 
+           control.frame, control.seq_no);
 
     return 0;
 }
