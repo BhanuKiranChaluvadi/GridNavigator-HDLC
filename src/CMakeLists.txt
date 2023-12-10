@@ -14,10 +14,12 @@ set(YAHDLC_HEADERS
 add_library(yahdlc_lib STATIC ${YAHDLC_SOURCES} ${YAHDLC_HEADERS})
 
 # Create a library target for grid_navigation
-add_library(grid_navigation_lib grid_navigation.c)
+add_library(grid_navigation_lib grid_navigation.c yahdlc_decoder.c)
+
+target_link_libraries(grid_navigation_lib yahdlc_lib)
 
 # Create an executable target for project
 add_executable(grid_navigation_yahdlc main.c)
 
 # Link the library with your executable
-target_link_libraries(grid_navigation_yahdlc yahdlc_lib grid_navigation_lib)
+target_link_libraries(grid_navigation_yahdlc grid_navigation_lib)
