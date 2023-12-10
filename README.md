@@ -26,11 +26,11 @@ To build the project, follow these steps:
 After building the project, you can run the unit tests and the main program:
 1. To run unit tests:
    ```bash
-   ./tests/unit_tests
+   ./tests/GridNavigationTests
    ```
 2. To run the main program:
    ```bash
-   ./src/grid_navigation_yahdlc
+    ./src/GridNavigate
    ```
 
 

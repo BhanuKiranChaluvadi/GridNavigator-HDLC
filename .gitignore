@@ -1,6 +1,6 @@
 # Ignore build directory
 /build/
 
-*.log
+/.vscode/
 
 /debug/

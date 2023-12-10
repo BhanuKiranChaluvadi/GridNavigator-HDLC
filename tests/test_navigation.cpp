@@ -1,4 +1,4 @@
-#define BOOST_TEST_DYN_LINK
+// #define BOOST_TEST_DYN_LINK
 #define BOOST_TEST_MODULE gridnavigator
 #include <boost/test/unit_test.hpp>
 extern "C"

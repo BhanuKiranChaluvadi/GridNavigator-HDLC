@@ -1,20 +1,23 @@
-# find a boost install with the libraries unit_test_framework
+# Find Boost with unit_test_framework
 find_package(Boost REQUIRED COMPONENTS unit_test_framework)
 
-# enable CTest testing
+# Enable CTest testing
 enable_testing()
 
-# Add a testing executable
-add_executable(unit_tests test_navigation.cpp)
+# Add an executable for grid navigation tests
+add_executable(GridNavigationTests test_navigation.cpp)
 
-target_link_libraries(unit_tests
-    grid_navigation_lib
+# Link the executable with the Grid Navigation Library and Boost's Unit Test Framework
+target_link_libraries(GridNavigationTests
+    GridNavigationLib
     Boost::unit_test_framework
 )
 
-target_compile_definitions(unit_tests
+# Define BOOST_TEST_DYN_LINK to enable dynamic linking with Boost Test
+target_compile_definitions(GridNavigationTests
     PRIVATE
         BOOST_TEST_DYN_LINK
 )
 
-add_test(test_all unit_tests)
+# Add the executable as a test
+add_test(NAME GridNavigationAllTests COMMAND GridNavigationTests)
