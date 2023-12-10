@@ -1,40 +1,37 @@
 #include "grid_navigation.h"
 
-// Function to check if a move is valid
-int isValidMove(const Position *position, int direction)
+int isValidMove(const Position *position, Direction direction)
 {
     switch (direction)
     {
-    case 1: // Up ↑
+    case UP:
         return position->y > 0;
-    case 2: // Down ↓
+    case DOWN:
         return position->y < GRID_SIZE - 1;
-    case 3: // Right →
+    case RIGHT:
         return position->x < GRID_SIZE - 1;
-    case 4: // Left ←
+    case LEFT:
         return position->x > 0;
     }
     return 0;
 }
 
-// Function to move the character on the grid
-void moveCharacter(Position *position, int direction)
+void moveCharacter(Position *position, Direction direction)
 {
     if (!isValidMove(position, direction))
         return;
-
     switch (direction)
     {
-    case 1: // Up ↑
+    case UP:
         position->y -= 1;
         break;
-    case 2: // Down ↓
+    case DOWN:
         position->y += 1;
         break;
-    case 3: // Right →
+    case RIGHT:
         position->x += 1;
         break;
-    case 4: // Left ←
+    case LEFT:
         position->x -= 1;
         break;
     }
