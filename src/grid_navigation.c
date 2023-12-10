@@ -1,7 +1,5 @@
 #include "grid_navigation.h"
 
-// Define the character's starting position
-int characterPosition[2] = {0, 4}; // [row, col]
 
 // Function to check if a move is valid
 int isValidMove(int *x, int *y, int direction)
