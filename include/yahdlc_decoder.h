@@ -4,7 +4,8 @@
 #include <stdint.h>
 #include "grid_navigation.h"
 
-typedef struct {
+typedef struct
+{
     char *data;
     int dataLength;
     int index;
