@@ -50,7 +50,7 @@ int main() {
                     if (repeatCount < 3 && lastMove != -1) {
                         // Apply all non-repeated moves
                         for (int k = 0; k < repeatCount; k++) {
-                            moveCharacter(&characterPosition[0], &characterPosition[1], lastMove);
+                            // moveCharacter(&characterPosition[0], &characterPosition[1], lastMove);
                             printf("...Current position of the character: (%d, %d)\n", characterPosition[0], characterPosition[1]);
                         }
                     }
@@ -76,7 +76,7 @@ int main() {
     // Process any remaining moves
     if (repeatCount < 3 && lastMove != -1) {
         for (int k = 0; k < repeatCount; k++) {
-            moveCharacter(&characterPosition[0], &characterPosition[1], lastMove);
+            // moveCharacter(&characterPosition[0], &characterPosition[1], lastMove);
             printf("Current position of the character: (%d, %d)\n", characterPosition[0], characterPosition[1]);
         }   
     }
