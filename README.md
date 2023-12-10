@@ -1,36 +1,42 @@
 # Grid Navigator HDLC
 
 ## Overview
-This C-based program simulates a game terminal that navigates a character on a 5x5 grid. It interprets pre-recorded instructions wrapped in HDLC frames, ensuring the character moves within the grid legally.
+Grid Navigator HDLC is a C-based simulation program designed to navigate a character through a 5x5 grid. The program interprets pre-recorded instructions enclosed in HDLC frames and ensures that the character's movements within the grid are valid and within bounds.
 
-## Usage
-- Run the executable, which reads from `transmission.bin` and displays the final character position.
+## Getting Started
+Clone the repository with all its submodules using the following command:
+```bash
+git clone --recurse-submodules git@github.com:BhanuKiranChaluvadi/GridNavigator-HDLC.git
+```
 
 ## Dependencies
-- [yahdlc](https://github.com/bang-olufsen/yahdlc)
+- [yahdlc](https://github.com/bang-olufsen/yahdlc): A library for handling HDLC framing.
 
 ## Build
-To build the project, follow these steps:
-1. Create a build directory:
+1. Create a build directory and navigate into it:
    ```bash
-   mkdir build
-   cd build
+   mkdir build && cd build
    ```
-2. Run CMake and build the project:
+2. Configure the project with CMake:
    ```bash
    cmake ..
+   ```
+3. Compile the project:
+   ```bash
    make
    ```
 
-## Run
-After building the project, you can run the unit tests and the main program:
-1. To run unit tests:
-   ```bash
-   ./tests/GridNavigationTests
-   ```
-2. To run the main program:
-   ```bash
-    ./src/GridNavigate
-   ```
+## Usage
+To use the Grid Navigator HDLC, follow these steps:
 
+### Running Unit Tests
+To ensure everything is set up correctly:
+```bash
+./tests/GridNavigationTests
+```
 
+### Executing the Program
+The program reads from `transmission.bin` and displays the final position of the character on the grid.
+```bash
+./src/GridNavigate
+```
